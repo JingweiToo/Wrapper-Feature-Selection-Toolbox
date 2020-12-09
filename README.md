@@ -3,11 +3,6 @@
 This toolbox offers more than 40 wrapper feature selection methods
 
 The < A_Main.m file > provides the demostration of some methods on feature selection problems. 
-
-* The goals of this framework are:
-    * Sharing knowledge of meta-heuristic fields to everyone without a fee
-    * Helping other researchers in all field access to optimization algorithms as quickly as possible
-    * Implement the classical as well as the state-of-the-art meta-heuristics (The whole history of meta-heuristics)
     
 %---List of available wrapper FS methods------------------------------
 
