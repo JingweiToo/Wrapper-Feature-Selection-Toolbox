@@ -18,6 +18,7 @@ The < A_Main.m file > provides the demostration of some methods on feature selec
 'mrfo'      : Manta Ray Foraging Optimization; 
 
 % 2019
+
 'aso'       : Atom Search Optimization; 
 
 'hho'       : Harris Hawks Optimization; 
