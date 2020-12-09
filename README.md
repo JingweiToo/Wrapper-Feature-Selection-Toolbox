@@ -1,117 +1,74 @@
-# Metaheuristic / Wrapper Feature Selection Toolbox
+# Wrapper Feature Selection Toolbox
+---
+> "Toward talent scientist: Sharing and learning together"
+>  --- [Jingwei Too](https://jingweitoo.wordpress.com/)
+---
 
-This toolbox offers more than 40 wrapper feature selection methods
+## Description
 
-The < A_Main.m file > provides the demostration of some methods on feature selection problems. 
+* This toolbox offers more than 40 wrapper feature selection methods
+    + The < A_Main.m file > provides the demostrations on benchmark dataset. 
+
+
+* Main goals of this toolbox are:
+    + Knowledge sharing on wrapper feature selection  
+    + Assists others in data mining projects
+
+## Requirement
+
+* MATLAB 2014 or above 
+* Statistics and Machine Learning Toolbox
+
+## List of available methods
+* Note that the methods are altered so that they can be used in feature selection tasks. 
+* The extra parameters represent the parameter(s) other than population size and maximum number of iteration
+
+| No. | Abbreviation | Name                                         | Year | Extra Parameters |
+|-----|--------------|----------------------------------------------|------|------------------|
+| 43  | MPA          | Marine Predators Algorithm                   | 2020 | Yes              |
+| 42  | GNDO         | Generalized Normal Distribution Optimization | 2020 | No               |
+| 41  | SMA          | Slime Mould Algorithm                        | 2020 | No               |
+| 40  | MRFO         | Manta Ray Foraging Optimization              | 2020 | Yes              |
+| 39  | EO           | Equilibrium Optimizer                        | 2020 | No               |
+| 38  | ASO          | Atom Search Optimization                     | 2019 | Yes              |
+| 37  | HGSO         | Henry Gas Solubility Optimization            | 2019 | Yes              |
+| 36  | HHO          | Harris Hawks Optimization                    | 2019 | No               |
+| 35  | PFA          | Path Finder Algorithm                        | 2019 | No               |
+| 34  | PRO          | Poor And Rich Optimization                   | 2019 | Yes              |
+| 33  | BOA          | Butterfly Optimization Algorithm             | 2018 | Yes              |
+| 32  | EPO          | Emperor Penguin Optimizer                    | 2018 | Yes              |
+| 31  | TGA          | Tree Growth Algorithm                        | 2018 | Yes              |
+| 30  | ABO          | Artificial Butterfly Optimization            | 2017 | Yes              |
+| 29  | SSA          | Salp Swarm Algorithm                         | 2017 | No               |
+| 28  | WSA          | Weighted Superposition Attraction            | 2017 | Yes              |
+| 27  | SBO          | Satin Bower Bird Optimization                | 2017 | Yes              |
+| 26  | JA           | Jaya Algorithm                               | 2016 | No               |
+| 25  | CSA          | Crow Search Algorithm                        | 2016 | Yes              |
+| 24  | SCA          | Sine Cosine Algorithm                        | 2016 | No               |
+| 23  | WOA          | Whale Optimization Algorithm                 | 2016 | Yes              |
+| 22  | ALO          | Ant Lion Optimizer                           | 2015 | No               |
+| 21  | HLO          | Human Learning Optimization                  | 2015 | Yes              |
+| 20  | MBO          | Monarch Butterfly Optimization               | 2015 | Yes              |  
+| 19  | MFO          | Moth Flame Optimization                      | 2015 | Yes              |
+| 18  | MVO          | Multiverse Optimizer                         | 2015 | Yes              |
+| 17  | TSA          | Tree Seed Algorithm                          | 2015 | Yes              |
+| 16  | GWO          | Grey Wolf Optimizer                          | 2014 | No               |
+| 15  | SOS          | Symbiotic Organisms Search                   | 2014 | No               |
+| 14  | FPA          | Flower Pollination Algorithm                 | 2012 | Yes              |
+| 13  | FOA          | Fruitfly Optimization Algorithm              | 2012 | No               |
+| 12  | BA           | Bat Algorithm                                | 2010 | Yes              |
+| 11  | FA           | Firefly Algorithm                            | 2010 | Yes              |
+| 10  | CS           | Cuckoo Search Algorithm                      | 2009 | Yes              |
+| 09  | GSA          | Gravitational Search Algorithm               | 2009 | Yes              |
+| 08  | ABC          | Artificial Bee Colony                        | 2007 | Yes              |
+| 07  | HS           | Harmony Search                               | 2001 | Yes              |
+| 06  | DE           | Differential Evolution                       | 1997 | Yes              |
+| 05  | ACO          | Ant Colony Optimization                      | -    | Yes              |
+| 04  | ACS          | Ant Colony System                            | -    | Yes              |
+| 03  | PSO          | Particle Swarm Optimization                  | -    | Yes              |
+| 02  | GA           | Genetic Algorithm                            | -    | Yes              |
+| 01  | SA           | Simulated Annealing                          | -    | Yes              |
+ 
     
-%---List of available wrapper FS methods------------------------------
-
-% 2020
-
-'mpa'       : Marine Predators Algorithm; 
-
-'gndo'      : Generalized Normal Distribution Optimization;
-
-'sma'       : Slime Mould Algorithm; 
-
-'eo'        : Equilibrium Optimizer;
-
-'mrfo'      : Manta Ray Foraging Optimization; 
-
-% 2019
-
-'aso'       : Atom Search Optimization; 
-
-'hho'       : Harris Hawks Optimization; 
-
-'hgso'      : Henry Gas Solubility Optimization; 
-
-'pfa'       : Path Finder Algorithm; 
-
-'pro'       : Poor And Rich Optimization; 
-
-% 2018
-
-'boa'       : Butterfly Optimization Algorithm;
-
-'epo'       : Emperor Penguin Optimizer; 
-
-'tga'       : Tree Growth Algorithm; 
-
-% 2017
-
-'abo'       : Artificial Butterfly Optimization; 
-
-'ssa'       : Salp Swarm Algorithm; 
-
-'sbo'       : Satin Bower Bird Optimization; 
-
-'wsa'       : Weighted Superposition Attraction; 
-
-% 2016
-
-'ja'        : Jaya Algorithm; 
-
-'csa'       : Crow Search Algorithm;
-
-'sca'       : Sine Cosine Algorithm; 
-
-'woa'       : Whale Optimization Algorithm;
-
-% 2015
-
-'alo'       : Ant Lion Optimizer; 
-
-'hlo'       : Human Learning Optimization;
-
-'mbo'       : Monarch Butterfly Optimization; 
-
-'mfo'       : Moth Flame Optimization;
-
-'mvo'       : Multi Verse Optimizer; 
-
-'tsa'       : Tree Seed Algorithm;
-
-% 2014
-
-'gwo'       : Grey Wolf Optimizer; 
-
-'sos'       : Symbiotic Organisms Search; 
-
-% 2012
-
-'fpa'       : Flower Pollination Algorithm;
-
-'foa'       : Fruit Fly Optimization Algorithm; 
-
-% 2009 - 2010
-
-'ba'        : Bat Algorithm; 
-
-'fa'        : Firefly Algorithm; 
-
-'cs'        : Cuckoo Search Algorithm; 
-
-'gsa'       : Gravitational Search Algorithm;
-
-% Traditional
-
-'abc'       : Artificial Bee Colony; 
-
-'hs'        : Harmony Search;        
-
-'de'        : Differential Evolution; 
-
-'aco'       : Ant Colony Optimization;
-
-'acs'       : Ant Colony System; 
-
-'pso'       : Particle Swarm Optimization; 
-
-'gat'       : Genetic Algorithm (Tournament); 
-
-'ga'        : Genetic Algorithm (Roulette Wheel); 
-
-'sa'        : Simulated Annealing;
 
 
