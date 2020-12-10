@@ -97,7 +97,6 @@ opts.f  = 3;      % control parameter
 opts.l  = 2;      % control parameter
 ```
 
-
 ## Equilibrium Optimizer (EO)
 * EO contains 3 extra parameters
 ```code 
@@ -136,19 +135,64 @@ opts.G0     = 100;   % initial gravitational constant
 opts.alpha  = 20;    % cosntant
 ```
 
+## Harmony Search (HS)
+* HS contains 3 extra parameters
+```code 
+opts.PAR   = 0.05;   % pitch adjusting rate
+opts.HMCR  = 0.7;    % harmony memory considering rate
+opts.bw    = 0.2;    % bandwidth
+```
+
+## Henry Gas Solubility Optimization (HGSO)
+* HGSO contains 7 extra parameters
+```code 
+opts.Nc     = 2;       % number of gas types / cluster
+opts.K      = 1;       % constant
+opts.alpha  = 1;       % influence of other gas
+opts.beta   = 1;       % constant 
+opts.L1     = 5E-3;    % constant 
+opts.L2     = 100;     % constant 
+opts.L3     = 1E-2;    % constant 
+```
+
+## Human Learning Optimization (HLO)
+* HLO contains 2 extra parameters
+```code 
+opts.pi  = 0.85;    % probability of individual learning
+opts.pr  = 0.1;     % probability of exploration learning
+```
+
+## Manta Ray Foraging Optimization (MRFO)
+* MRFO contains 1 extra parameter
+```code 
+opts.S  = 2;     % somersault factor 
+```
+
+## Marine Predators Algorithm (MPA)
+* MPA contains 2 extra parameters
+```code 
+opts.P     = 0.5;    % constant
+opts.FADs  = 0.2;    % fish aggregating devices effect
+```
 
 
+## Monarch Butterfly Optimization (MBO)
+* MBO contains 5 extra parameters
+```code 
+opts.peri   = 1.2;     % migration period
+opts.p      = 5/12;    % ratio
+opts.Smax   = 1;       % maximum step
+opts.BAR    = 5/12;    % butterfly adjusting rate
+opts.N1     = 4;       % number of butterflies in land 1
+```
 
-
-
-
-
-
-
-
-
-
-
+## Multi-Verse Optimizer (MVO)
+* MVO contains 3 extra parameters
+```code 
+opts.p     = 6;       % control TDR
+opts.Wmax  = 1;       % maximum WEP
+opts.Wmin  = 0.2;     % minimum WEP
+```
 
 
 
