@@ -4,6 +4,9 @@
 >  --- [Jingwei Too](https://jingweitoo.wordpress.com/)
 ---
 
+![Wheel](https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/5dc2bdb4-ce4b-4e0e-bd6e-0237ff6ddde1/f9a9e760-64b9-4e31-9903-dffcabdf8be6/images/1607601518.JPG)
+
+
 ## Introduction
 
 * This toolbox offers more than 40 wrapper feature selection methods
@@ -36,7 +39,7 @@ FS = jfs('sma',feat,label,opts);
 
 
 ## Output
-* Acc  : accuracy of feature selection 
+* Acc  : accuracy of validation model
 * FS   : feature selection model ( It contains several results )
     + sf : index of selected features
     + ff : selected features
