@@ -4,56 +4,162 @@
 >  --- [Jingwei Too](https://jingweitoo.wordpress.com/)
 ---
 
-## Description
+## Introduction
 
 * This toolbox offers more than 40 wrapper feature selection methods
-    + The < A_Main.m file > provides the demostrations on benchmark dataset. 
+* The < A_Main.m file > provides the examples of how to apply these methods on benchmark dataset 
+* Source code of these methods are written based on pseudocode & paper
 
 
 * Main goals of this toolbox are:
     + Knowledge sharing on wrapper feature selection  
     + Assists others in data mining projects
 
-### Example 1
-```code 
-%% Particle Swarm Optimization (PSO) 
-clear, clc, close;
+## Usage
+The main function *jfs* is adopted to perform feature selection. You may switch the algorithm by changing the 'pso' to other [other abbreviations](/README.md#list-of-available-wrapper-feature-selection-methods)
+* If you wish to use particle swarm optimization ( see example 1 ) then you may write
+```code
+FS = jfs('pso',feat,label,opts);
+```
+* If you want to use slime mould algorithm ( see example 2 ) then you may write
+```code
+FS = jfs('sma',feat,label,opts);
+```
 
-% Parameters settings
-opts.k  = 5; 
-ho      = 0.2;
-opts.N  = 10;     
-opts.T  = 100;   
+## Input
+* feat   : feature vector matrix ( Instance x Features )
+* label  : label matrix ( Instance x 1 )
+* opts   : parameter settings
+    + N : number of solutions / population size ( *for all methods* )
+    + T : maximum number of iterations ( *for all methods* )
+    + k : *k*-value in *k*-nearest neighbor 
+
+
+## Output
+* Acc  : accuracy of feature selection 
+* FS   : feature selection model ( It contains several results )
+    + sf : index of selected features
+    + ff : selected features
+    + nf : number of selected features
+    + c  : convergence curve
+    
+
+## Notation
+Some methods have their specific parameters ( example: PSO, GA, DE ), and if you do not set them then they will be defined as default settings
+* you may open the < m.file > to view or change the parameters
+* you may use *opts* to set the parameters of method ( see example 1 or refer [here](/Description.md) )
+* you may also change the < jFitnessFunction.m file > 
+
+
+### Example 1 : Particle Swarm Optimization ( PSO ) 
+```code 
+% Common parameter settings
+opts.k  = 5;      % Number of k in K-nearest neighbor
+opts.N  = 10;     % number of solutions
+opts.T  = 100;    % maximum number of iterations
+% Parameters of PSO
 opts.c1 = 2;
 opts.c2 = 2;
 opts.w  = 0.9;
 
-% Prepare data
-load ionosphere.mat; 
+% Load dataset
+load ionosphere.mat;
+
+% Ratio of validation data
+ho = 0.2;
+% Divide data into training and validation sets
 HO = cvpartition(label,'HoldOut',ho); 
 opts.Model = HO; 
 
-% Feature selection 
+% Perform feature selection 
 FS = jfs('pso',feat,label,opts);
 
 % Define index of selected features
 sf_idx = FS.sf;
 
 % Accuracy  
-Acc = jknn(feat(:,sf_idx),label,opts);
+Acc = jknn(feat(:,sf_idx),label,opts); 
+
+% Plot convergence
+plot(FS.c); grid on; xlabel('Number of Iterations'); ylabel('Fitness Value'); title('PSO');
 
 ```
+
+### Example 2 : Slime Mould Algorithm ( SMA ) 
+```code
+% Common parameter settings
+opts.k  = 5;      % Number of k in K-nearest neighbor
+opts.N  = 10;     % number of solutions
+opts.T  = 100;    % maximum number of iterations
+
+% Load dataset
+load ionosphere.mat; 
+
+% Ratio of validation data
+ho = 0.2;
+% Divide data into training and validation sets
+HO = cvpartition(label,'HoldOut',ho); 
+opts.Model = HO; 
+
+% Perform feature selection 
+FS = jfs('sma',feat,label,opts);
+
+% Define index of selected features
+sf_idx = FS.sf;
+
+% Accuracy  
+Acc = jknn(feat(:,sf_idx),label,opts); 
+
+% Plot convergence
+plot(FS.c); grid on; xlabel('Number of Iterations'); ylabel('Fitness Value'); title('SMA');
+
+```
+
+### Example 3 : Whale Optimization Algorithm ( WOA )
+```code
+% Common parameter settings
+opts.k  = 5;      % Number of k in K-nearest neighbor
+opts.N  = 10;     % number of solutions
+opts.T  = 100;    % maximum number of iterations
+% Parameter of WOA
+opts.b = 1;
+
+% Load dataset
+load ionosphere.mat; 
+
+% Ratio of validation data
+ho = 0.2;
+% Divide data into training and validation sets
+HO = cvpartition(label,'HoldOut',ho); 
+opts.Model = HO; 
+
+% Perform feature selection 
+FS = jfs('woa',feat,label,opts);
+
+% Define index of selected features
+sf_idx = FS.sf;
+
+% Accuracy  
+Acc = jknn(feat(:,sf_idx),label,opts); 
+
+% Plot convergence
+plot(FS.c); grid on; xlabel('Number of Iterations'); ylabel('Fitness Value'); title('WOA');
+
+```
+
 
 ## Requirement
 
 * MATLAB 2014 or above 
 * Statistics and Machine Learning Toolbox
 
-## List of available methods
-* Note that the methods are altered so that they can be used in feature selection tasks. 
-* The extra parameters represent the parameter(s) other than population size and maximum number of iteration
-* Click on the name of method to view the detailed parameters
-* Use the *opts* to set the specific parameters
+
+## List of available wrapper feature selection methods
+* Note that the methods are altered so that they can be used in feature selection tasks 
+* The extra parameters represent the parameter(s) other than population size and maximum number of iterations
+* Click on the name of method to view the extra parameter(s)
+* Use the *opts* to set the specific parameter(s)
+
 
 | No. | Abbreviation | Name                                                                                        | Year | Extra Parameters |
 |-----|--------------|---------------------------------------------------------------------------------------------|------|------------------|
