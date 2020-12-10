@@ -33,7 +33,7 @@ opts.max   = 5;      % Maximum limits allowed
 ```code 
 opts.stepe = 0.05;    % control number of sunspot 
 opts.ratio = 0.2;     % control step
-opts.ty   = 1;        % version 1 or 2
+opts.ty    = 1;        % version 1 or 2
 ```
 
 ## Atom Search Optimization (ASO)
@@ -186,6 +186,12 @@ opts.BAR    = 5/12;    % butterfly adjusting rate
 opts.N1     = 4;       % number of butterflies in land 1
 ```
 
+## Moth Flame Optimization (MFO)
+* MFO contains 1 extra parameter
+```code
+opts.b  = 1;    % constant
+```
+
 ## Multi-Verse Optimizer (MVO)
 * MVO contains 3 extra parameters
 ```code 
@@ -194,8 +200,71 @@ opts.Wmax  = 1;       % maximum WEP
 opts.Wmin  = 0.2;     % minimum WEP
 ```
 
+## Particle Swarm Optimization (PSO)
+* PSO contains 3 extra parameters
+```code 
+opts.c1  = 2;         % cognitive factor
+opts.c2  = 2;         % social factor 
+opts.w   = 0.9;       % inertia weight
+```
 
+## Poor And Rich Optimization (PRO)
+* PRO contains 1 extra parameter
+```code
+opts.Pmut = 0.06;    % mutation probability
+```
 
+## Satin Bower Bird Optimization (SBO)
+* SBO contains 3 extra parameters
+```code
+opts.alpha  = 0.94;    % constant
+opts.z      = 0.02;    % constant
+opts.MR     = 0.05;    % mutation rate
+```
+
+## Simulated Annealing (SA)
+* SA contains 2 extra parameters
+```code
+opts.c   = 0.93;    % cooling rate
+opts.T0  = 100;     % initial temperature
+```
+
+## Sine Cosine Algorithm (SCA)
+* SCA contains 1 extra parameter
+```code
+opts.alpha  = 2;    % constant
+```
+
+## Tree Growth Algorithm (TGA)
+* TGA contains 5 extra parameters
+```code
+opts.N1      = 3;      % size of first group
+opts.N2      = 5;      % size of second group
+opts.N4      = 3;      % size of fourth group
+opts.theta   = 0.8;    % tree reduction rate of power
+opts.lambda  = 0.5;    % control nearest tree
+```
+
+## Tree Seed Algorithm (TSA)
+* TSA contains 1 extra parameter
+```code
+opts.ST    = 0.1;    % switch probability
+```
+
+## Weighted Superposition Attraction (WSA)
+* WSA contains 4 extra parameters
+```code
+opts.tau    = 0.8;      % constant 
+opts.sl     = 0.035;    % step length
+opts.phi    = 0.001;    % constant
+opts.lambda = 0.75;     % constant
+```
+
+## Whale Optimization Algorithm (WOA)
+* WOA contains 1 extra parameter
+```code
+opts.b  = 1;    % constant
+```
 
 
 
