@@ -1,6 +1,5 @@
-%% Wrapper Feature Selection Demostration 
-
-% Source code of the FS methods are written based on pseudocode 
+% Wrapper Feature Selection Toolbox 
+ 
 % There are more than 40 wrapper FS methods are offered 
 % You may open < List_Method.m file > to check all available methods
 
@@ -11,7 +10,7 @@
 % If you want to use 'SMA' (see example 2) then you write
 % FS = jfs('sma',feat,label,opts);
 
-% * All methods have different name/abbrevation (refer jfs.m file)
+% * All methods have different calling name (refer List_Method.m file)
 
 
 %---Input-------------------------------------------------------------

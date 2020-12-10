@@ -32,8 +32,8 @@ end
 fit  = zeros(1,N);
 fitG = inf;
 
-curve=inf;
-t=1;
+curve = inf;
+t= 1 ;
 % Iteration
 while t <= max_Iter
   for i = 1:N
