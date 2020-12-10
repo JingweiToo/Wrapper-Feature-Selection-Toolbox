@@ -45,6 +45,7 @@ FS = jfs('sma',feat,label,opts);
     + ff : selected features
     + nf : number of selected features
     + c  : convergence curve
+    + t  : computational time (s)
     
 
 ## Notation
