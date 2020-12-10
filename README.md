@@ -14,6 +14,36 @@
     + Knowledge sharing on wrapper feature selection  
     + Assists others in data mining projects
 
+### Example 1
+```code 
+%% Particle Swarm Optimization (PSO) 
+clear, clc, close;
+
+% Parameters settings
+opts.k  = 5; 
+ho      = 0.2;
+opts.N  = 10;     
+opts.T  = 100;   
+opts.c1 = 2;
+opts.c2 = 2;
+opts.w  = 0.9;
+
+% Prepare data
+load ionosphere.mat; 
+HO = cvpartition(label,'HoldOut',ho); 
+opts.Model = HO; 
+
+% Feature selection 
+FS = jfs('pso',feat,label,opts);
+
+% Define index of selected features
+sf_idx = FS.sf;
+
+% Accuracy  
+Acc = jknn(feat(:,sf_idx),label,opts);
+
+```
+
 ## Requirement
 
 * MATLAB 2014 or above 
