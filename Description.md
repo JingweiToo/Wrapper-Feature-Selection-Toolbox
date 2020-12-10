@@ -89,14 +89,6 @@ opts.f  = 3;      % control parameter
 opts.l  = 2;      % control parameter
 ```
 
-## Emperor Penguin Optimizer (EPO)
-* EPO contains 3 extra parameters
-```code 
-opts.M  = 2;      % movement parameter
-opts.f  = 3;      % control parameter
-opts.l  = 2;      % control parameter
-```
-
 ## Equilibrium Optimizer (EO)
 * EO contains 3 extra parameters
 ```code 
