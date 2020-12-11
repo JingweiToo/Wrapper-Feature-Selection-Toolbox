@@ -33,7 +33,7 @@ opts.max   = 5;      % Maximum limits allowed
 ```code 
 opts.stepe = 0.05;    % control number of sunspot 
 opts.ratio = 0.2;     % control step
-opts.ty    = 1;        % version 1 or 2
+opts.ty    = 1;       % version 1 or 2
 ```
 
 ## Atom Search Optimization (ASO)
