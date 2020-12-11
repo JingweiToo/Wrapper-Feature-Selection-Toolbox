@@ -21,7 +21,7 @@ dim = size(feat,2);
 X   = zeros(N,dim); 
 for i = 1:N
 	for d = 1:dim
-    X(i,d) = lb+(ub-lb)*rand();
+    X(i,d) = lb + (ub - lb) * rand();
   end
 end
 % Pre
