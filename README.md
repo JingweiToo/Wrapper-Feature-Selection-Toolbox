@@ -1,4 +1,4 @@
-# Wrapper Feature Selection Toolbox
+# Jx-WFST : A Wrapper Feature Selection Toolbox
 ---
 > "Toward Talent Scientist: Sharing and Learning Together"
 >  --- [Jingwei Too](https://jingweitoo.wordpress.com/)
