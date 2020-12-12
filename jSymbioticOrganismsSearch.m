@@ -19,9 +19,9 @@ fun = @jFitnessFunction;
 dim = size(feat,2); 
 % Initial 
 X   = zeros(N,dim); 
-for i=1:N
-  for d=1:dim
-    X(i,d)=lb+(ub-lb)*rand();
+for i = 1:N
+  for d = 1:dim
+    X(i,d) = lb + (ub - lb) * rand();
   end
 end  
 % Fitness
