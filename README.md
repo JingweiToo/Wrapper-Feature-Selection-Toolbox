@@ -19,7 +19,7 @@
     + Assists others in data mining projects
 
 ## Usage
-The main function *jfs* is adopted to perform feature selection. You may switch the algorithm by changing the 'pso' to other [other abbreviations](/README.md#list-of-available-wrapper-feature-selection-methods)
+The main function *jfs* is adopted to perform feature selection. You may switch the algorithm by changing the 'pso' to [other abbreviations](/README.md#list-of-available-wrapper-feature-selection-methods)
 * If you wish to use particle swarm optimization ( see example 1 ) then you may write
 ```code
 FS = jfs('pso',feat,label,opts);
