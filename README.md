@@ -86,7 +86,6 @@ Acc = jknn(feat(:,sf_idx),label,opts);
 
 % Plot convergence
 plot(FS.c); grid on; xlabel('Number of Iterations'); ylabel('Fitness Value'); title('PSO');
-
 ```
 
 ### Example 2 : Slime Mould Algorithm ( SMA ) 
@@ -116,7 +115,6 @@ Acc = jknn(feat(:,sf_idx),label,opts);
 
 % Plot convergence
 plot(FS.c); grid on; xlabel('Number of Iterations'); ylabel('Fitness Value'); title('SMA');
-
 ```
 
 ### Example 3 : Whale Optimization Algorithm ( WOA )
@@ -148,7 +146,6 @@ Acc = jknn(feat(:,sf_idx),label,opts);
 
 % Plot convergence
 plot(FS.c); grid on; xlabel('Number of Iterations'); ylabel('Fitness Value'); title('WOA');
-
 ```
 
 
