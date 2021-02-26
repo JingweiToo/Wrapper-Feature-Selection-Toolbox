@@ -124,7 +124,7 @@ while t <= max_Iter
   
   % {3} Scout bee phase
   for i = 1:N
-    if limit(i) == max_limit
+    if limit(i) >= max_limit
       for d = 1:dim
         % Produce new bee (8)
         X(i,d) = lb + (ub - lb) * rand();
