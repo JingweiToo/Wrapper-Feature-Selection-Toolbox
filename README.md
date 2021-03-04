@@ -2,7 +2,7 @@
 
 [![View Wrapper Feature Selection Toolbox on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/84139-wrapper-feature-selection-toolbox)
 [![License](https://img.shields.io/badge/license-BSD_3-yellow.svg)](https://github.com/JingweiToo/Wrapper-Feature-Selection-Toolbox/blob/main/LICENSE)
-[![GitHub release](https://img.shields.io/badge/release-1.1-green.svg)](https://github.com/JingweiToo/Wrapper-Feature-Selection-Toolbox)
+[![GitHub release](https://img.shields.io/badge/release-1.1.1-green.svg)](https://github.com/JingweiToo/Wrapper-Feature-Selection-Toolbox)
 
 ---
 > "Toward Talent Scientist: Sharing and Learning Together"
